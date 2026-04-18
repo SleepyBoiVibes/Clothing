@@ -1,0 +1,185 @@
+/* 1. RESET & CORE STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.6;
+}
+
+/* 2. ANNOUNCEMENT BAR (Now Sticky) */
+.announcement {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 12px;
+    font-size: 0.65rem;
+    letter-spacing: 2.5px;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* 3. NAVIGATION */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 5%;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+    background: #fff;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    cursor: default;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    margin-left: 25px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.6;
+}
+
+/* 4. HERO SECTION */
+.hero {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
+                url('https://images.pexels.com/photos/16170/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1200');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-text h1 {
+    font-size: 4.5rem;
+    letter-spacing: -3px;
+    color: white;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+.hero-text p {
+    color: white;
+    letter-spacing: 8px;
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+}
+
+.btn-shop {
+    display: inline-block;
+    padding: 16px 35px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    border: 1px solid #fff;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-shop:hover {
+    background-color: transparent;
+    color: #fff;
+}
+
+/* 5. PRODUCT GRID */
+.products { padding: 80px 5%; }
+
+.products h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.product-card {
+    text-align: center;
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+}
+
+.product-img {
+    height: 400px;
+    background-color: #f9f9f9;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+    transition: filter 0.3s;
+}
+
+.product-card:hover .product-img {
+    filter: brightness(90%);
+}
+
+.product-card p {
+    font-weight: bold;
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.product-card span {
+    color: #888;
+    font-size: 0.8rem;
+}
+
+/* 6. FOOTER */
+footer {
+    padding: 60px 20px;
+    text-align: center;
+    border-top: 1px solid #f0f0f0;
+    margin-top: 60px;
+    background-color: #fafafa;
+}
+
+/* 7. RESPONSIVENESS */
+@media(max-width:768px) {
+    nav {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .nav-links {
+        margin-top: 15px;
+    }
+    
+    .nav-links a {
+        margin: 0 10px;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.8rem;
+    }
+}
